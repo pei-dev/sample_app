@@ -26,6 +26,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                 password_confirmation: "bar" }}
     end
     assert_template 'users/new'
+    assert is_logged_in?
 
     # 7.3.4の演習(未実施) 
     assert_select 'form[action="/signup"]'

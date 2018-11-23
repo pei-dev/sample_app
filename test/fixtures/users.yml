@@ -1,1 +1,8 @@
 #６章でからにしました。
+
+
+# 8.22で下記追加
+michael:
+  name: Michael Example
+  email: michael@example.com
+  password_digest: <%= User.digest('password') %>
