@@ -31,7 +31,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     # 7.3.4の演習(未実施) 
     assert_select 'form[action="/signup"]'
     assert_select 'div#error_explanation' #idの指定は#でする
-    assert_select 'div.field_with_errors' #クラスの指定はドット.でする
+
 
  end
 end
