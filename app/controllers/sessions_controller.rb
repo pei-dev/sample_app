@@ -7,7 +7,9 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # ユーザログイン後にユーザー情報のページにリダイレクトする
       log_in user  # session_helperで定義したメソッドのことです。
-      redirect_to user # ?????
+      # redirect_to user # ?????
+      redirect_back_or user
+
     else
       # エラーメッセージを作成する
       flash.now[:danger] = 'Invalid email/password comnbination' 
